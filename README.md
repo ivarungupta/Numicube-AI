@@ -1,51 +1,60 @@
-# React + TypeScript + Vite
+# NumicubeAI - AI-Powered Intelligent Calculator  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+NumicubeAI is an advanced, AI-powered calculator designed to simplify complex computations and offer dynamic visual insights. Inspired by cutting-edge technology like the new iPad, it combines traditional calculation features with AI-driven intelligence for an unparalleled user experience.  
 
-Currently, two official plugins are available:
+## Features  
+- **AI-Powered Calculations**: Solve complex mathematical problems and natural language queries using OpenAI API.  
+- **Dynamic Graphing**: Visualize data and equations in real-time with Chart.js.  
+- **Seamless Client-Server Communication**: Powered by Axios for fast, reliable interaction.  
+- **Secure Data Storage**: Save and retrieve calculation history using MongoDB.  
+- **Responsive Design**: Optimized for all devices with a sleek React-based interface.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used  
+- **Frontend**: React, CSS, Chart.js  
+- **Backend**: Node.js, Express, OpenAI API  
+- **Database**: MongoDB  
+- **Others**: Axios, Multer  
 
-## Expanding the ESLint configuration
+## How It Works  
+1. Users input queries (e.g., equations, natural language problems).  
+2. The system categorizes inputs:  
+   - Standard calculations are handled locally or on the backend.  
+   - Complex or natural language queries are processed via the OpenAI API.  
+3. Results are displayed instantly, with options for dynamic graphing and saving history.  
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Installation and Setup  
 
-- Configure the top-level `parserOptions` property like this:
+### Prerequisites  
+- Node.js installed (v16+ recommended)  
+- MongoDB database  
+- OpenAI API key  
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Steps  
+1. **Clone the Repository**:  
+   ```bash  
+   git clone <repository-url>  
+   cd calc-ai
+   ```
+2. **Install Dependencies:**:  
+   ```bash  
+   npm install
+   ```
+3. **Set Environment Variables:**:  
+   ```bash  
+   OPENAI_API_KEY=<your-openai-api-key>  
+    MONGO_URI=<your-mongodb-uri>  
+    PORT=5000  
+   ```
+4. **Clone the Repository**:
+   Create a .env file in the backend folder with the following keys: 
+   ```bash  
+   git clone <repository-url>  
+   cd calc-ai
+   ```
+5. **Access the Application**:
+   Open http://localhost:3000 in your browser.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Contributing 
+Contributions are welcome! Fork the repository, make changes, and submit a pull request.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# calc-fe
